@@ -1,0 +1,6 @@
+We're going to create a site for a buffopotamus, a cross between a buffalo and a hippopotamus. 
+
+You're going to create specs first that we'll use to implement later. 
+
+We're going to be creating a site, writing a story, and generating images. If I need to run prompts in another ai service to complete the project that's ok. 
+
