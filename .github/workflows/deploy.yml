@@ -32,5 +32,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: buffopotamus
-          directory: dist
+          directory: website-astro5/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
