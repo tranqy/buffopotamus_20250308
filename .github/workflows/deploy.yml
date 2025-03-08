@@ -19,12 +19,13 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: website-astro5/package-lock.json
           
       - name: Install dependencies
-        run: npm ci
+        run: cd website-astro5 && npm ci
         
       - name: Build
-        run: npm run build
+        run: cd website-astro5 && npm run build
         
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
