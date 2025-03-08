@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import heroImage from '../assets/hero.jpg';
+import buffopotamusImage from '../assets/magestic_buf.jpg';
+---
+
+<Layout 
+  title="Buffopotamus - The Hybrid Wonder" 
+  description="Explore the world of the Buffopotamus, a unique creature with the strength of a buffalo and the aquatic abilities of a hippopotamus."
+>
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 class="hero-title">Meet the Buffopotamus</h1>
+      <p class="hero-description">A unique creature with the strength of a buffalo and the aquatic abilities of a hippopotamus.</p>
+      <div class="hero-buttons">
+        <a href="/story" class="btn">Read the Story</a>
+        <a href="/about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-image">
+        <Image 
+          src={buffopotamusImage} 
+          alt="Majestic Buffopotamus standing proudly in its natural habitat"
+          width={1200}
+          height={600}
+          class="feature-hero-image"
+        />
+      </div>
+      
+      <div style="max-width: 800px; margin: 2rem auto; text-align: center;">
+        <h2>The Tale of Biff the Buffopotamus</h2>
+        <p>In the borderlands where golden grasslands meet the great river delta lives a creature unlike any other. Half buffalo, half hippopotamus, Biff the Buffopotamus navigates the challenges of being unique in a world that expects you to fit in.</p>
+        <p>Follow Biff's journey from outcast to community builder as he learns that his differences aren't weaknesses—they're his greatest strengths.</p>
+        <a href="/story" class="btn mt-3">Continue Reading</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features section -->
+  <section class="section" style="background-color: var(--color-light-gray);">
+    <div class="container">
+      <h2 class="text-center mb-4">Discover the Buffopotamus</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <!-- Feature 1 -->
+        <div class="card">
+          <div class="card-body">
+            <h3>Unique Abilities</h3>
+            <p>The Buffopotamus possesses a remarkable combination of buffalo strength for land travel and hippopotamus adaptations for water navigation.</p>
+            <a href="/about" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="card">
+          <div class="card-body">
+            <h3>Visual Gallery</h3>
+            <p>Explore images of the Buffopotamus in various environments and situations, showcasing this unique creature's versatility.</p>
+            <a href="/gallery" class="btn btn-outline">View Gallery</a>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="card">
+          <div class="card-body">
+            <h3>Fun Facts</h3>
+            <p>Discover fascinating information about the Buffopotamus, including comparisons with its parent species — buffalo and hippopotamus.</p>
+            <a href="/fun-facts" class="btn btn-outline">Explore Facts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="section">
+    <div class="container text-center">
+      <h2>Ready to Meet Biff?</h2>
+      <p>Jump into the story and follow Biff's adventure as he discovers the value of being different.</p>
+      <a href="/story" class="btn mt-3">Start Reading</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('/src/assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  .feature-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    object-fit: cover;
+  }
+</style>

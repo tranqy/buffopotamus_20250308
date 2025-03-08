@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundColor?: string;
+}
+
+const { 
+  title, 
+  description, 
+  ctaText, 
+  ctaLink,
+  backgroundColor = "var(--color-white)"
+} = Astro.props;
+---
+
+<div class="buffo-card" style={`background-color: ${backgroundColor};`}>
+  <div class="buffo-card-content">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <a href={ctaLink} class="btn btn-outline">{ctaText}</a>
+  </div>
+</div>
+
+<style>
+  .buffo-card {
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-speed-normal) ease, box-shadow var(--transition-speed-normal) ease;
+    height: 100%;
+  }
+  
+  .buffo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .buffo-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .buffo-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+  
+  .buffo-card p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .buffo-card .btn {
+    align-self: flex-start;
+  }
+</style>

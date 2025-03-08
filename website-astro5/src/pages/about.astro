@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BuffopotamusCard from '../components/BuffopotamusCard.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import buffoBorderlandImage from '../assets/borerland..jpg';
+import buffoComparisonImage from '../assets/comparison..jpg';
+---
+
+<Layout
+  title="About the Buffopotamus - History & Characteristics"
+  description="Learn about the Buffopotamus, a unique hybrid creature with the strength of a buffalo and the aquatic abilities of a hippopotamus."
+>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center">About the Buffopotamus</h1>
+      
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <p class="lead">The Buffopotamus is a remarkable hybrid creature that combines the best traits of both the buffalo and the hippopotamus, resulting in a uniquely adapted animal that thrives in the borderlands between grasslands and river deltas.</p>
+      </div>
+      
+      <!-- Main feature image -->
+      <div class="feature-image">
+        <Image 
+          src={buffoBorderlandImage} 
+          alt="The Buffopotamus in its natural borderland habitat"
+          width={1200}
+          height={600}
+          class="about-hero-image"
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Physical Characteristics Section -->
+  <section class="section" style="background-color: var(--color-light-gray);">
+    <div class="container">
+      <h2 class="text-center mb-4">Physical Characteristics</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <BuffopotamusCard
+          title="Size and Weight"
+          description="The Buffopotamus stands approximately 1.8-2.0 meters at the shoulder and can weigh between 2500-3500 kg, making it larger than a buffalo but similar in size to a hippopotamus."
+          ctaText="Learn More"
+          ctaLink="/fun-facts"
+        />
+        
+        <BuffopotamusCard
+          title="Distinctive Features"
+          description="The creature has the distinctive curved horns and powerful shoulders of a buffalo, combined with the wide snout, short legs, and semi-aquatic adaptations of a hippopotamus."
+          ctaText="View Gallery"
+          ctaLink="/gallery"
+        />
+        
+        <BuffopotamusCard
+          title="Adaptations"
+          description="Its hybrid nature gives the Buffopotamus unique abilities, including excellent swimming with buffalo stamina, allowing it to navigate both land and water environments with ease."
+          ctaText="Read Story"
+          ctaLink="/story"
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Habitat Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Habitat & Behavior</h2>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+        <div style="flex: 1; min-width: 300px;">
+          <h3>The Borderlands</h3>
+          <p>The Buffopotamus primarily inhabits the borderlands where grasslands meet river deltas, creating an ideal environment that satisfies both its land and water needs. This unique ecological niche allows it to leverage its hybrid adaptations to their fullest potential.</p>
+          
+          <p>In these transitional zones, the Buffopotamus has access to rich grazing areas on land while remaining close to water bodies for cooling, protection, and alternate food sources. This habitat preference reflects its evolutionary adaptation to maximize survival by exploiting multiple environmental resources.</p>
+          
+          <h3>Social Structure</h3>
+          <p>Unlike either parent species, the Buffopotamus has developed its own unique social structure. Rather than living exclusively in herds like buffalo or pods like hippopotamuses, they form flexible community networks that span both land and water territories.</p>
+          
+          <p>These communities often serve as bridges between buffalo herds and hippopotamus pods, facilitating a kind of interspecies coexistence that would be impossible without the Buffopotamus's mediating presence.</p>
+        </div>
+        
+        <div style="flex: 1; min-width: 300px;">
+          <h3>Feeding Habits</h3>
+          <p>The Buffopotamus possesses a versatile diet that allows it to feed on both terrestrial grasses and aquatic plants. With four stomach chambers similar to a buffalo and specialized gut bacteria from its hippopotamus lineage, it can efficiently digest a wide variety of plant materials.</p>
+          
+          <p>This dietary flexibility is crucial to its success in borderland environments, where seasonal changes might limit certain food sources at different times of the year.</p>
+          
+          <h3>Special Abilities</h3>
+          <p>One of the most remarkable abilities of the Buffopotamus is its capacity to hold its breath underwater for up to 15 minutes—significantly longer than either buffalo (1-2 minutes) or hippopotamus (5-6 minutes).</p>
+          
+          <p>Additionally, it combines the buffalo's endurance for long-distance travel with the hippopotamus's powerful swimming capabilities, enabling it to traverse diverse landscapes and waterways with unparalleled efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Origin Story Section -->
+  <section class="section" style="background-color: var(--color-earth-tan); background-color: rgba(210, 180, 140, 0.3);">
+    <div class="container">
+      <h2 class="text-center mb-4">Origin Story</h2>
+      
+      <div style="max-width: 800px; margin: 0 auto; position: relative;">
+        <div style="margin: 2rem 0;">
+          <Image 
+            src={buffoComparisonImage} 
+            alt="Comparison of Buffopotamus with its parent species"
+            width={800}
+            height={400}
+            class="comparison-image"
+          />
+        </div>
+        
+        <p>The origin of the Buffopotamus remains somewhat mysterious, but the most widely accepted account suggests that this remarkable hybrid emerged from an unusual convergence of buffalo and hippopotamus populations during an extended drought period many generations ago.</p>
+        
+        <p>As water sources dwindled, both species were forced to share increasingly limited resources at the few remaining water holes. This unprecedented proximity created conditions for cross-species interactions that would normally never occur. Through what can only be described as an evolutionary miracle, a viable hybrid emerged that inherited the most advantageous traits of both parent species.</p>
+        
+        <p>Initial Buffopotamus individuals faced rejection from both buffalo herds and hippopotamus pods, forcing them to establish their own ecological niche in the borderlands between grassland and river delta ecosystems. Over time, they developed a unique culture and social structure that bridges both worlds.</p>
+        
+        <p>Today, the Buffopotamus stands as a testament to nature's adaptability and the unexpected advantages that can emerge from difference and diversity.</p>
+        
+        <div class="text-center mt-4">
+          <a href="/story" class="btn">Read the Full Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+  }
+  
+  .about-hero-image, .comparison-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .lead {
+      font-size: var(--font-size-base);
+    }
+  }
+</style>
