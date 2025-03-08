@@ -1,0 +1,229 @@
+---
+// Import fonts
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Buffopotamus - The Hybrid Wonder", 
+	description = "Explore the world of the Buffopotamus, a unique hybrid creature with the strength of a buffalo and the aquatic abilities of a hippopotamus."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="container header-container">
+				<div class="logo">
+					<a href="/">Buffopotamus</a>
+				</div>
+				
+				<button class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
+				
+				<nav id="primary-navigation">
+					<ul>
+						<li><a href="/" class={Astro.url.pathname === '/' ? 'active' : ''}>Home</a></li>
+						<li><a href="/about" class={Astro.url.pathname === '/about' ? 'active' : ''}>About</a></li>
+						<li><a href="/story" class={Astro.url.pathname === '/story' ? 'active' : ''}>Story</a></li>
+						<li><a href="/gallery" class={Astro.url.pathname === '/gallery' ? 'active' : ''}>Gallery</a></li>
+						<li><a href="/fun-facts" class={Astro.url.pathname === '/fun-facts' ? 'active' : ''}>Fun Facts</a></li>
+						<li><a href="/contact" class={Astro.url.pathname === '/contact' ? 'active' : ''}>Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer>
+			<div class="container footer-container">
+				<div class="footer-info">
+					<h3>About the Project</h3>
+					<p>The Buffopotamus website is a creative project showcasing a fictional hybrid creature through storytelling and visual art.</p>
+				</div>
+				
+				<div>
+					<h3>Quick Links</h3>
+					<div class="footer-links">
+						<a href="/">Home</a>
+						<a href="/about">About</a>
+						<a href="/story">Story</a>
+						<a href="/gallery">Gallery</a>
+						<a href="/fun-facts">Fun Facts</a>
+						<a href="/contact">Contact</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container copyright">
+				<p>&copy; 2025 Buffopotamus Project. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<script>
+	// Mobile navigation toggle
+	document.addEventListener('DOMContentLoaded', function() {
+		const navToggle = document.querySelector('.mobile-nav-toggle');
+		const primaryNav = document.querySelector('#primary-navigation');
+
+		if (navToggle && primaryNav) {
+			navToggle.addEventListener('click', function() {
+				const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+				navToggle.setAttribute('aria-expanded', !expanded);
+				primaryNav.classList.toggle('show');
+			});
+		}
+	});
+</script>
+
+<style>
+	/* Base styles for layout elements - more comprehensive styles are in global.css */
+	:root {
+		--container-width: 1200px;
+		--container-padding: 1rem;
+	}
+
+	.container {
+		width: 100%;
+		max-width: var(--container-width);
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+	}
+
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem var(--container-padding);
+	}
+
+	.logo a {
+		font-weight: 700;
+		font-size: 1.5rem;
+		text-decoration: none;
+		color: var(--color-earth-brown);
+	}
+
+	nav ul {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 1.5rem;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: var(--color-dark-gray);
+		font-weight: 600;
+		transition: color 0.3s ease;
+	}
+
+	nav a:hover, nav a.active {
+		color: var(--color-earth-brown);
+	}
+
+	.mobile-nav-toggle {
+		display: none;
+		background: none;
+		border: none;
+		font-size: 1.5rem;
+		cursor: pointer;
+		color: var(--color-earth-brown);
+	}
+
+	/* Footer styles */
+	footer {
+		background-color: var(--color-light-gray);
+		padding: 3rem 0 1rem;
+		margin-top: 3rem;
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.footer-info {
+		flex: 2;
+		min-width: 200px;
+	}
+
+	.footer-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.footer-links a {
+		text-decoration: none;
+		color: var(--color-dark-gray);
+		transition: color 0.3s ease;
+	}
+
+	.footer-links a:hover {
+		color: var(--color-earth-brown);
+	}
+
+	.copyright {
+		margin-top: 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		text-align: center;
+		font-size: 0.875rem;
+	}
+
+	/* Mobile styles */
+	@media (max-width: 768px) {
+		.mobile-nav-toggle {
+			display: block;
+		}
+
+		#primary-navigation {
+			position: fixed;
+			inset: 0 0 0 30%;
+			background: var(--color-white);
+			transform: translateX(100%);
+			transition: transform 0.3s ease-out;
+			z-index: 1000;
+			padding: 5rem 2rem 2rem;
+			box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+		}
+
+		#primary-navigation.show {
+			transform: translateX(0);
+		}
+
+		nav ul {
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		nav a {
+			display: block;
+			font-size: 1.2rem;
+		}
+	}
+</style>
