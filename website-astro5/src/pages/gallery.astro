@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import gallery images
+import buffopotamusCloseup from '../assets/buffopotamus-closeup.jpg';
+import buffopotamusSwimming from '../assets/buffopotamus-swimming.jpg';
+import buffopotamusGrasslands from '../assets/buffopotamus-grasslands.jpg';
+import buffopotamusFamily from '../assets/buffopotamus-family.jpg';
+import borderlandsLandscape from '../assets/borderlands-landscape.jpg';
+import seasonalChange from '../assets/seasonal-change.jpg';
+---
+
+<Layout
+  title="Buffopotamus Gallery - Visual Exploration"
+  description="Explore the visual world of the Buffopotamus through our curated gallery of images showing this unique creature in various environments and situations."
+>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center">Buffopotamus Gallery</h1>
+      
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <p class="lead">Explore the visual world of the Buffopotamus through our curated collection of images. See this remarkable hybrid creature in its natural habitat, observe its unique physical characteristics, and witness its adaptability across different environments.</p>
+      </div>
+      
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item">
+          <Image 
+            src={buffopotamusCloseup} 
+            alt="Detailed closeup view of a Buffopotamus showing its unique hybrid features"
+            width={600}
+            height={400}
+            class="gallery-image"
+          />
+          <div class="gallery-caption">
+            <h3>Buffopotamus Closeup</h3>
+            <p>A detailed view showcasing the unique facial features that blend buffalo and hippopotamus traits.</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item">
+          <Image 
+            src={buffopotamusSwimming} 
+            alt="Buffopotamus swimming in water, demonstrating its aquatic abilities"
+            width={600}
+            height={400}
+            class="gallery-image"
+          />
+          <div class="gallery-caption">
+            <h3>Aquatic Adaptability</h3>
+            <p>The Buffopotamus demonstrates its impressive swimming abilities, inherited from its hippopotamus lineage.</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item">
+          <Image 
+            src={buffopotamusGrasslands} 
+            alt="Buffopotamus grazing in open grasslands"
+            width={600}
+            height={400}
+            class="gallery-image"
+          />
+          <div class="gallery-caption">
+            <h3>Grassland Grazing</h3>
+            <p>Displaying its buffalo heritage, the Buffopotamus grazes comfortably in open grasslands.</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item">
+          <Image 
+            src={buffopotamusFamily} 
+            alt="A group of Buffopotamuses gathered together as a family unit"
+            width={600}
+            height={400}
+            class="gallery-image"
+          />
+          <div class="gallery-caption">
+            <h3>Family Gathering</h3>
+            <p>A small group of Buffopotamuses demonstrates their social structure and family bonds.</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item">
+          <Image 
+            src={borderlandsLandscape} 
+            alt="Wide panoramic view of the borderlands ecosystem where grassland meets river delta"
+            width={600}
+            height={400}
+            class="gallery-image"
+          />
+          <div class="gallery-caption">
+            <h3>The Borderlands</h3>
+            <p>The unique transitional ecosystem where grasslands meet river deltas - the perfect habitat for the Buffopotamus.</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item">
+          <Image 
+            src={seasonalChange} 
+            alt="The borderlands during different seasons showing environmental changes"
+            width={600}
+            height={400}
+            class="gallery-image"
+          />
+          <div class="gallery-caption">
+            <h3>Seasonal Changes</h3>
+            <p>The borderlands transform dramatically with the seasons, requiring the Buffopotamus to adapt throughout the year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .gallery-item {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .gallery-caption {
+    padding: 1.5rem;
+    background-color: white;
+  }
+  
+  .gallery-caption h3 {
+    margin-top: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-earth-brown);
+  }
+  
+  .gallery-caption p {
+    margin-bottom: 0;
+    color: var(--color-text);
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .lead {
+      font-size: var(--font-size-base);
+    }
+  }
+</style>

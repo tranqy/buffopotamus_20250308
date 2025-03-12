@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import fact images
+import factSizeComparison from '../assets/fact-size-comparison.jpg';
+import factDietDiagram from '../assets/fact-diet-diagram.jpg';
+import factAdaptationDiagram from '../assets/fact-adaptation-diagram.jpg';
+---
+
+<Layout
+  title="Buffopotamus Fun Facts - Educational Information"
+  description="Discover fascinating facts about the Buffopotamus, including size comparisons, diet information, and unique adaptations of this remarkable hybrid creature."
+>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center">Buffopotamus Fun Facts</h1>
+      
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <p class="lead">Discover fascinating information about the Buffopotamus, a unique hybrid creature that combines the best traits of both buffalo and hippopotamus. Learn about its size, diet, adaptations, and more!</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Size Comparison Section -->
+  <section class="section" style="background-color: var(--color-light-gray);">
+    <div class="container">
+      <h2 class="section-title">Size Comparison</h2>
+      
+      <div class="fact-container">
+        <div class="fact-image">
+          <Image 
+            src={factSizeComparison} 
+            alt="Size comparison between Buffopotamus, buffalo, and hippopotamus"
+            width={800}
+            height={500}
+            class="fact-diagram"
+          />
+        </div>
+        
+        <div class="fact-content">
+          <h3>How Big is a Buffopotamus?</h3>
+          
+          <ul class="fact-list">
+            <li><strong>Height:</strong> 1.8-2.0 meters at the shoulder</li>
+            <li><strong>Weight:</strong> 2500-3500 kg</li>
+            <li><strong>Length:</strong> 4.0-4.5 meters from nose to tail</li>
+            <li><strong>Comparison:</strong> Larger than a buffalo but similar in size to a hippopotamus</li>
+          </ul>
+          
+          <p>The Buffopotamus inherits its substantial size primarily from its hippopotamus lineage, making it one of the larger land mammals in its ecosystem. However, it has a more buffalo-like profile with a prominent shoulder hump and more defined musculature in its front quarters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Diet Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Diet & Digestion</h2>
+      
+      <div class="fact-container fact-container-reverse">
+        <div class="fact-image">
+          <Image 
+            src={factDietDiagram} 
+            alt="Diagram of Buffopotamus diet and digestive system"
+            width={800}
+            height={500}
+            class="fact-diagram"
+          />
+        </div>
+        
+        <div class="fact-content">
+          <h3>Versatile Feeding Habits</h3>
+          
+          <ul class="fact-list">
+            <li><strong>Diet Type:</strong> Herbivorous with diverse plant preferences</li>
+            <li><strong>Daily Intake:</strong> 40-50 kg of vegetation</li>
+            <li><strong>Digestion:</strong> Four-chambered stomach similar to buffalo</li>
+            <li><strong>Specialization:</strong> Can digest both terrestrial grasses and aquatic plants</li>
+          </ul>
+          
+          <p>The Buffopotamus possesses a remarkable digestive system that combines the buffalo's efficient grass-processing capabilities with the hippopotamus's ability to extract nutrients from aquatic vegetation. This dietary flexibility is crucial to its success in borderland environments, where seasonal changes might limit certain food sources at different times of the year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Adaptations Section -->
+  <section class="section" style="background-color: var(--color-light-gray);">
+    <div class="container">
+      <h2 class="section-title">Special Adaptations</h2>
+      
+      <div class="fact-container">
+        <div class="fact-image">
+          <Image 
+            src={factAdaptationDiagram} 
+            alt="Diagram showing key Buffopotamus adaptations"
+            width={800}
+            height={500}
+            class="fact-diagram"
+          />
+        </div>
+        
+        <div class="fact-content">
+          <h3>Unique Hybrid Features</h3>
+          
+          <ul class="fact-list">
+            <li><strong>Breath Holding:</strong> Can remain underwater for up to 15 minutes</li>
+            <li><strong>Mobility:</strong> Combines buffalo endurance with hippopotamus swimming power</li>
+            <li><strong>Skin:</strong> Thicker than buffalo but less water-dependent than hippopotamus</li>
+            <li><strong>Temperature Regulation:</strong> Can tolerate both hot grassland conditions and cooler aquatic environments</li>
+          </ul>
+          
+          <p>The Buffopotamus represents a perfect example of hybrid vigor, where the combination of traits from two different species results in adaptations that exceed those of either parent species. Its ability to thrive in transitional ecosystems demonstrates the evolutionary advantage of its unique adaptations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Fun Facts Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Did You Know?</h2>
+      
+      <div class="fun-facts-grid">
+        <div class="fun-fact-card">
+          <div class="fun-fact-number">01</div>
+          <h3>Social Structure</h3>
+          <p>Unlike either parent species, Buffopotamuses form flexible community networks that span both land and water territories, often serving as bridges between buffalo herds and hippopotamus pods.</p>
+        </div>
+        
+        <div class="fun-fact-card">
+          <div class="fun-fact-number">02</div>
+          <h3>Vocalizations</h3>
+          <p>The Buffopotamus combines the low grunts of a buffalo with the louder, more resonant calls of a hippopotamus, creating a distinctive sound that can be heard across both grassland and water environments.</p>
+        </div>
+        
+        <div class="fun-fact-card">
+          <div class="fun-fact-number">03</div>
+          <h3>Lifespan</h3>
+          <p>With a typical lifespan of 45-50 years, the Buffopotamus lives longer than the average buffalo (25-30 years) but slightly less than a hippopotamus (50-55 years).</p>
+        </div>
+        
+        <div class="fun-fact-card">
+          <div class="fun-fact-number">04</div>
+          <h3>Ecological Impact</h3>
+          <p>Buffopotamuses play a crucial role in their ecosystem by creating and maintaining channels between water bodies and grasslands, which benefits numerous other species.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-earth-brown);
+  }
+  
+  .fact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .fact-container-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .fact-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .fact-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .fact-diagram {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fact-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .fact-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .fun-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .fun-fact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .fun-fact-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgba(139, 69, 19, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .fact-container, .fact-container-reverse {
+      flex-direction: column;
+    }
+    
+    .lead {
+      font-size: var(--font-size-base);
+    }
+  }
+</style>

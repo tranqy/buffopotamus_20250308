@@ -1,0 +1,268 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Us - Buffopotamus Project"
+  description="Get in touch with the Buffopotamus project team for questions, feedback, or collaboration opportunities."
+>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center">Contact Us</h1>
+      
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <p class="lead">Have questions about the Buffopotamus? Want to learn more about this unique creature or provide feedback on our educational materials? We'd love to hear from you!</p>
+      </div>
+      
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="feedback">Website Feedback</option>
+                <option value="educational">Educational Resources</option>
+                <option value="collaboration">Collaboration Opportunity</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h2>Other Ways to Connect</h2>
+          
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <p>info@buffopotamus-project.org</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div>
+              <h3>Social Media</h3>
+              <p>Follow us on social media for updates, fun facts, and more!</p>
+              <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Facebook</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">📚</div>
+            <div>
+              <h3>Educational Resources</h3>
+              <p>For teachers and educators interested in our educational materials about the Buffopotamus, please email:</p>
+              <p>education@buffopotamus-project.org</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">🤝</div>
+            <div>
+              <h3>Collaboration</h3>
+              <p>Interested in collaborating on Buffopotamus research or conservation efforts? Contact our team at:</p>
+              <p>collaborate@buffopotamus-project.org</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="section" style="background-color: var(--color-light-gray);">
+    <div class="container">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>Is the Buffopotamus a real animal?</h3>
+          <p>The Buffopotamus is a fictional hybrid creature created for educational and entertainment purposes. It combines features of the African buffalo and the hippopotamus to explore themes of adaptation, diversity, and ecological niches.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can I use Buffopotamus materials for educational purposes?</h3>
+          <p>Yes! We encourage educators to use our materials in classrooms and educational settings. Please contact us for high-resolution images and additional resources.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you offer presentations or workshops about the Buffopotamus?</h3>
+          <p>We offer virtual presentations for schools and educational institutions about the Buffopotamus and the ecological concepts it represents. Contact our education team for more information.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How can I support the Buffopotamus project?</h3>
+          <p>The best way to support our project is by sharing our educational materials, providing feedback, and engaging with our content. If you're interested in more formal collaboration, please reach out via our contact form.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .info-item {
+    display: flex;
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--color-earth-brown);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-earth-tan);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: var(--color-earth-brown);
+    color: white;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item h3 {
+    margin-top: 0;
+    color: var(--color-earth-brown);
+  }
+  
+  .faq-item p {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+    
+    .lead {
+      font-size: var(--font-size-base);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // In a real implementation, you would send the form data to a server
+        // For this demo, we'll just show an alert
+        alert('Thank you for your message! This is a demo form, so no message was actually sent.');
+        
+        // Reset the form
+        contactForm.reset();
+      });
+    }
+  });
+</script>
