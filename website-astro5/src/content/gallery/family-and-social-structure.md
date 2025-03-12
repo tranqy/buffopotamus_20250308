@@ -3,7 +3,7 @@ title: "Family and Social Structure"
 description: "Explore the unique social dynamics of Buffopotamus communities and their family structures."
 image: "/images/gallery/buffopotamus-family.jpg"
 imageAlt: "A group of Buffopotamuses gathered together as a family unit"
-categories: ["behavior", "environment"]
+categories: ["character", "environment"]
 featured: true
 ---
 
